@@ -72,7 +72,7 @@ const reverseArray = (arr)=>{
     //write your code here
     // for(let i =0;i<arr.length;i++)
     // {
-    //       arr.push(arr[i])
+    //       arr.unshift(arr[i])
     // }
     // return (arr);
 
