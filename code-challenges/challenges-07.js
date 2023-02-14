@@ -117,24 +117,15 @@ const cvFormatter = (arr) => {
 
             }
             tech1 = arr[i].tech;
-            // // for(let i=0;i<arr.length;i++){
-            // //     YearsOfExperience = arr[i].yearsOfExperience
-            // //     console.log(fullName);
-            // //     console.log(YearsOfExperience);}
-            // // }
-
-            //     else{
-
-            // }
+            obj =
+            {
+                "fullName": fullName1,
+                "tech": tech1,
+            };
+            array.push(obj);
+        
         }
-        obj =
-        {
-            "fullName": fullName1,
-            "tech": tech1,
-        };
-        array.push(obj);
     }
-console.log("hello",array);
     return array;
 };
 
