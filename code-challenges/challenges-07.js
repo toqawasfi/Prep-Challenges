@@ -23,15 +23,15 @@
 const objLat = (obj) => {
     // write your code here
 
-  let nfname0 = obj.firstName.charAt(0).toUpperCase()
+    let nfname0 = obj.firstName.charAt(0).toUpperCase()
 
-let nfname= obj.firstName.slice(1);
-  let capitalizedWord= nfname0+nfname;
-  let lname0 = obj.lastName.charAt(0).toUpperCase()
-  let lname1= obj.lastName.slice(1);
-  let capitalizedWord1= lname0 +lname1;
+    let nfname = obj.firstName.slice(1);
+    let capitalizedWord = nfname0 + nfname;
+    let lname0 = obj.lastName.charAt(0).toUpperCase()
+    let lname1 = obj.lastName.slice(1);
+    let capitalizedWord1 = lname0 + lname1;
 
-  return `my name is ${capitalizedWord} ${capitalizedWord1} I am ${obj.age} YO, and I love ${obj.hobby}.`;
+    return `my name is ${capitalizedWord} ${capitalizedWord1} I am ${obj.age} YO, and I love ${obj.hobby}.`;
 
 };
 
@@ -97,50 +97,46 @@ let nfname= obj.firstName.slice(1);
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    let array=[];
-let obj= [
-  
-]
- let FullName;
- let YearsOfExperience=0;
+    let array = [];
+    let obj = {};
+    let fullName1;
+    let tech1;
     // write your code herefor (const element of array1) {
-        for(let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
         // console.log(arr[i]. firstName);
-            if (arr[i].yearsOfExperience>'1')
-          
-{
-        
-        if (arr[i]. firstName == null )
-        {
-             fullName= arr[i].lastName;
-        }
-        else if ((arr[i]. lastName == null )){
-             fullName= arr[i].firstName;
-        }
-        else {
-            FullName =arr[i].firstName +" "+ arr[i].lastName;
-  
-        }
-        for(let i=0;i<arr.length;i++){
-            YearsOfExperience = arr[i].yearsOfExperience
-            console.log(FullName);
-            console.log(YearsOfExperience);}
-        }
-    
-            else{
+        if (arr[i].yearsOfExperience > 1) {
+
+            if (arr[i].firstName == null) {
+                fullName1 = arr[i].lastName;
+            }
+            else if ((arr[i].lastName == null)) {
+                fullName1 = arr[i].firstName;
+            }
+            else {
+                fullName1 = arr[i].firstName + " " + arr[i].lastName;
 
             }
-        }
-        obj=[
-            {
-               FullName:fullName,
-               YearsOfExperience:yearsOfExperience,
-                tech:tech
+            tech1 = arr[i].tech;
+            // // for(let i=0;i<arr.length;i++){
+            // //     YearsOfExperience = arr[i].yearsOfExperience
+            // //     console.log(fullName);
+            // //     console.log(YearsOfExperience);}
+            // // }
 
-        },
-    ]
-    array.push(obj)
+            //     else{
+
+            // }
+        }
+        obj =
+        {
+            "fullName": fullName1,
+            "tech": tech1,
         };
+        array.push(obj);
+    }
+console.log("hello",array);
+    return array;
+};
 
 // -------------------------------------------------------------------------------------------------------
 
