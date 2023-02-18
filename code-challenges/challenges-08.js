@@ -28,6 +28,10 @@
 
 const customerAndAge = (obj) => {
   // write your code here
+  
+  const myArray = Object.entries(obj).map(([key, value]) => "Customer Name :" +key +" , "+ "Age :" +value);
+  console.log(myArray);
+  return myArray;
 };
 // -------------------------------------------------------------------------------------------------------
 
