@@ -15,14 +15,24 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
-    // if (int1 <= 0 || int2 <= 0) {
-    //     return; // base case: stop recursion if n or m is zero or negative
-    //   }
-      recursionPattern(int1-1,int2);
-      recursionPattern(int1, int2-1);
-      return recursionPattern(int1,int2)
+  let arr = [];
+  arr.push(int1);
+  let result = int1 - int2;
+  while (result > 0) {
+    arr.push(result);
+    result=result-int2;
+  }
+console.log(result);
+while (result <= int1)
+{
+  arr.push(result);
+  result=result+int2;
 }
+return arr;
+}
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -40,20 +50,38 @@ const recursionPattern = (int1, int2) => {
 // 
 
 const filterLinks = (str) => {
-    // write your code here
-    var regex = /href="(.*?)"/;
-    // Match the regex against the tag string
-    var match = tag.match(regex);
-    // If there's a match, return the link string without the starting "http://" protocol
-    if (match) {
-      return match[1].replace(/^http:\/\//i, '');
-    }
-    // If there's no match, return null
+  // write your code here
 
-var tag = '<a href="https://example.com">Link</a>';
-var link = extractLinkFromTag(tag);
-return link;
+  // Match the href attribute and its value in the tag string
+  const hrefRegex = /href=["']([^"']+)/;
+  const hrefMatch = str.match(hrefRegex);
+
+  if (hrefMatch) {
+    // Get the URL from the href value
+    const hrefValue = hrefMatch[1];
+
+    // Check if the URL ends with .com, .org, or .net
+    const urlRegex = /:\/\/([^/]+)(\/|$)/;
+    const urlMatch = hrefValue.match(urlRegex);
+
+    if (urlMatch) {
+      // Return the matched URL
+      return urlMatch[1];
+    }
+  }
+
+  // If no link is found, return null
+  return null;
 }
+
+
+
+
+
+
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -71,7 +99,12 @@ return link;
 //
 
 const isPalindrome = (str) => {
-    // write your code here
+  const cleanString = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Check if the clean string reads the same forward and backward
+  const reverseString = cleanString.split('').reverse().join('');
+  return cleanString === reverseString;
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -95,7 +128,7 @@ const isPalindrome = (str) => {
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
